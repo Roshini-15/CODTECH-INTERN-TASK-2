@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+    double temperature, convertedTemp;
+
+    cout << "Temperature Converter\n";
+    cout << "1. Celsius to Fahrenheit\n";
+    cout << "2. Celsius to Kelvin\n";
+    cout << "3. Fahrenheit to Celsius\n";
+    cout << "4. Fahrenheit to Kelvin\n";
+    cout << "5. Kelvin to Celsius\n";
+    cout << "6. Kelvin to Fahrenheit\n";
+    cout << "Enter your choice (1-6): ";
+    cin >> choice;
+    cout << "Enter the temperature: ";
+    cin >> temperature;
+    switch(choice) {
+        case 1:
+            convertedTemp = (temperature * 9/5) + 32;
+            cout << temperature << " Celsius = " << convertedTemp << " Fahrenheit" << endl;
+            break;
+        case 2:
+            convertedTemp = temperature + 273.15;
+            cout << temperature << " Celsius = " << convertedTemp << " Kelvin" << endl;
+            break;
+        case 3: 
+            convertedTemp = (temperature - 32) * 5/9;
+            cout << temperature << " Fahrenheit = " << convertedTemp << " Celsius" << endl;
+            break;
+        case 4: 
+            convertedTemp = (temperature - 32) * 5/9 + 273.15;
+            cout << temperature << " Fahrenheit = " << convertedTemp << " Kelvin" << endl;
+            break;
+        case 5: 
+            convertedTemp = temperature - 273.15;
+            cout << temperature << " Kelvin = " << convertedTemp << " Celsius" << endl;
+            break;
+        case 6: 
+            convertedTemp = (temperature - 273.15) * 9/5 + 32;
+            cout << temperature << " Kelvin = " << convertedTemp << " Fahrenheit" << endl;
+            break;
+        default:
+            cout << "Invalid choice!" << endl;
+    }
+
+    return 0;
+}
